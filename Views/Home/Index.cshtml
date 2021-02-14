@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using Form_Submission.Models
+@model User
+
+<div class="text-center">
+    <h1 class="display-4">Enter User Information:</h1>
+    <form action="/register" method="POST">
+    <div class="text-left m-3">
+        <span asp-validation-for="FirstName"></span>
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName">
+    </div>
+    <div class="text-left m-3">
+        <span asp-validation-for="LastName"></span>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName">
+    </div>
+    <div class="text-left m-3">
+        <span asp-validation-for="Age"></span>
+        <label asp-for="Age"></label>
+        <input asp-for="Age">
+    </div>
+    <div class="text-left m-3">
+        <span asp-validation-for="Email"></span>
+        <label asp-for="Email"></label>
+        <input asp-for="Email">
+    </div>
+    <div class="text-left m-3">
+        <span asp-validation-for="Password"></span>
+        <label asp-for="Password"></label>
+        <input asp-for="Password">
+    </div>
+        <button class="btn-primary" type="submit">Submit</button>
+    </form>
+    <img src="~/img/DSC_4839.JPG" alt="Hiking" style="max-width: 75%;">
+
+</div>
