@@ -22,6 +22,15 @@ namespace Form_Submission.Controllers
         public IActionResult Register(User user)
         {
             Console.WriteLine(user.FirstName);
+            Console.WriteLine(user.Birthday);
+            if(user.Birthday < DateTime.Now)
+            {
+                Console.WriteLine("He was born before today.");
+            }
+            else
+            {
+                Console.WriteLine("He was born after today.");
+            }
             if(ModelState.IsValid)
             {
                 //send user to database
